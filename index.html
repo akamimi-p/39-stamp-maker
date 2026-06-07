@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>39表情包制作器</title>
+    <link rel="stylesheet" href="styles.css?v=12" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="stage-panel" aria-label="表情预览">
+        <div class="topbar">
+          <div>
+            <h1>39表情包制作器</h1>
+            <p class="credit-line">illust/Nnnn（Akamimi_p）</p>
+            <p class="usage-note">仅做个人娱乐使用，禁止使用侮辱性文字，禁止用作盈利</p>
+          </div>
+        </div>
+
+        <div class="canvas-wrap">
+          <canvas id="stickerCanvas" width="960" height="960" aria-label="当前表情画布"></canvas>
+        </div>
+
+        <section class="character-panel">
+          <div class="section-head">
+            <h2>Pick character</h2>
+            <span id="characterCount"></span>
+          </div>
+          <div id="characterGrid" class="character-grid"></div>
+        </section>
+      </section>
+
+      <aside class="control-panel" aria-label="制作控制">
+        <div class="download-group">
+          <button id="copyBtn" type="button">复制</button>
+          <button id="downloadBtn" class="primary-button" type="button">下载 PNG</button>
+        </div>
+
+        <div class="quick-actions">
+          <button id="resetBtn" type="button">重置布局</button>
+          <button id="centerBtn" type="button">居中图片</button>
+        </div>
+
+        <section class="form-grid">
+          <label>
+            文字
+            <textarea id="captionInput" rows="3" maxlength="60">哇哦</textarea>
+          </label>
+
+          <div class="two-col">
+            <label>
+              字色
+              <input id="textColor" type="color" value="#4b2a1b" />
+            </label>
+            <label>
+              描边
+              <input id="strokeColor" type="color" value="#ffffff" />
+            </label>
+          </div>
+
+          <label>
+            字体大小
+            <input id="fontSize" type="range" min="48" max="190" value="158" />
+          </label>
+
+          <label>
+            文字间距
+            <input id="letterSpacing" type="range" min="-8" max="28" value="2" />
+          </label>
+
+          <label>
+            文字旋转
+            <input id="textRotation" type="range" min="-18" max="18" value="0" />
+          </label>
+
+          <label>
+            文字横向
+            <input id="textX" type="range" min="80" max="880" value="480" />
+          </label>
+
+          <label>
+            文字纵向
+            <input id="textY" type="range" min="80" max="880" value="255" />
+          </label>
+
+          <label class="toggle-row">
+            <input id="curvedText" type="checkbox" />
+            拱形文字
+          </label>
+
+          <label>
+            图片大小
+            <input id="imageScale" type="range" min="45" max="135" value="82" />
+          </label>
+
+          <label>
+            图片描边
+            <input id="imageOutline" type="range" min="0" max="44" value="24" />
+          </label>
+        </section>
+      </aside>
+    </main>
+
+    <script src="app.js?v=12"></script>
+  </body>
+</html>
