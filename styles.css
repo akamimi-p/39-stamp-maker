@@ -204,7 +204,7 @@ canvas {
 
 .character-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(104px, 1fr));
+  grid-template-columns: repeat(5, minmax(0, 1fr));
   column-gap: 12px;
   row-gap: 30px;
   max-height: 360px;
@@ -309,7 +309,7 @@ input[type="range"] {
   }
 
   .character-grid {
-    grid-template-columns: repeat(auto-fit, minmax(112px, 1fr));
+    grid-template-columns: repeat(4, minmax(0, 1fr));
     column-gap: 14px;
     row-gap: 34px;
     max-height: 430px;
